@@ -1,0 +1,17 @@
+.start-box{
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    margin: 20px;
+    background-color: aliceblue;
+    opacity: 0.8;
+}
+
+.content-box{
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    margin: 20px;
+    background-color: aliceblue;
+    opacity: 0.8;
+}

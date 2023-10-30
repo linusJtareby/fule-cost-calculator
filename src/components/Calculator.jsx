@@ -77,7 +77,7 @@ function CarTripCalculator() {
         </div>
       )}
 
-      <img src='https://s7d1.scene7.com/is/image/hyundai/2023-sonata-hev-ltd-calyspo-red-profile:Vehicle-Carousel?fmt=webp-alpha' width={475} height={160}></img>
+      <img src='https://images.contentful.com/x7m88j6y655h/3f4iZv1o5G8MeKqaYkOgS2/5b1ad7764edd1d41f57b0f4d9fb40ac1/bigstock-Illustration-Of-Pollution-By-E.jpg' width={475} height={160}></img>
     </div>
     </div>
 

@@ -1,0 +1,71 @@
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  opacity: 0.8;
+}
+
+.car-trip-calculator {
+  background-color: #ffffff; /* Background color for the calculator box */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 500px;
+}
+
+.car-trip-calculator h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.car-trip-calculator form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.car-trip-calculator label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.car-trip-calculator input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 400px;
+  max-width: 50px;
+}
+
+.car-trip-calculator button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.car-trip-calculator button:hover {
+  background-color: #0056b3;
+}
+
+.car-trip-calculator h3 {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.car-trip-calculator img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
