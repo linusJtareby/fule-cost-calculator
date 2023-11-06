@@ -9,6 +9,7 @@ function QuoteComponent() {
   const [quotes, setQuotes] = useState([]);
   useEffect(() => {
 
+    console.log('test')
     fetch(apiUrl, {
       headers: {
         'X-Api-Key': process.env.REACT_APP_API_KEY

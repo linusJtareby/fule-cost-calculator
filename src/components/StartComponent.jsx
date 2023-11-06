@@ -1,5 +1,6 @@
 import "./StartComponent.css"
 import QuoteComponent from "./QuoteComponent";
+import WeatherComponent from "./WeatherComponent";
 
 function StartComponent() {
     return (
@@ -10,6 +11,7 @@ function StartComponent() {
                     <div className="quote">
                     <QuoteComponent/>
                     </div>
+                    <WeatherComponent/>
                 </div>
             </div>
         </>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from "./Calculator.css";
+import "./Calculator.css";
 
 function CarTripCalculator() {
   const [fuelPrice, setFuelPrice] = useState('');

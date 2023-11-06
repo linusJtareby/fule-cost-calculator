@@ -1,9 +1,6 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function NavBar() {
   return (
@@ -20,6 +17,7 @@ function NavBar() {
             <Nav.Link href="/fuel-calculator">Bränsleräknare</Nav.Link>
             <Nav.Link href="/calculator">Miniräknare</Nav.Link>
             <Nav.Link href="/ruler">Linjal</Nav.Link>
+            <Nav.Link href='/weather'>Väder</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
