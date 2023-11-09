@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
+// import './App.css';
 import CarTripCalculator from './components/Calculator';
 import StartComponent from './components/StartComponent';
 import NavBar from './components/NavBar'
 import NumberCalculator from './components/NumberCalculator';
-import Ruler from './components/Ruler';
 import WeatherComponent from './components/WeatherComponent';
+import DogComponent from './components/DogComponent';
 
 function App() {
   //Add api-key in .env
@@ -21,8 +21,8 @@ function App() {
           <Route path='/' element={<StartComponent/>}/>
           <Route path='/fuel-calculator' element={<CarTripCalculator/>}/>
           <Route path='/calculator' element={<NumberCalculator/>}/>
-          <Route path='/ruler' element={<Ruler/>}/>
           <Route path='/weather' element={<WeatherComponent/>}/>
+          <Route path='/hundkollen' element={<DogComponent/>}/>
         </Routes>
       </div>
     </BrowserRouter>

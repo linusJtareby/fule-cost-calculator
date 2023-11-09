@@ -1,9 +1,8 @@
 .start-box{
-    opacity: 0.8;
     border: 2px solid;
     margin: 40px;
     background-color: aliceblue;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     border-radius: 5px;
 }
 
@@ -12,14 +11,14 @@
     justify-content:center;
     align-items: center;
     min-height: 50vh;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     border: 2px solid;
     margin: 20px;
     background-color: aliceblue;
-    opacity: 0.8;
 }
 
 h2{
     font-size:large;
     color: brown;
+    margin-left: 10px;
 }

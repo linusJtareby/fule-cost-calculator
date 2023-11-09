@@ -16,8 +16,8 @@ function NavBar() {
           >
             <Nav.Link href="/fuel-calculator">Bränsleräknare</Nav.Link>
             <Nav.Link href="/calculator">Miniräknare</Nav.Link>
-            <Nav.Link href="/ruler">Linjal</Nav.Link>
             <Nav.Link href='/weather'>Väder</Nav.Link>
+            <Nav.Link href='/hundkollen'>Hundkollen</Nav.Link>            
           </Nav>
         </Navbar.Collapse>
       </Container>
