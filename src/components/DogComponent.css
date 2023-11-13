@@ -119,3 +119,8 @@ h4{
 span{
     margin-left: 10px;
 }
+
+p{
+    font-weight: bold;
+    color:chocolate;
+}

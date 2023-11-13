@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Fuel Cost Calculator-EN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Description
 
-## Available Scripts
+My little fun project started with the idea of creating a program capable of calculating the fuel cost for a car trip based
+on fuel price, average fuel consumption, and distance. I used React to create a web-based user interface, and when I was finished,
+I continued with some other ideas. I decided to create a website that has become quite extensive, where I could create some
+fun components as coding practice and integrate them into one website.
 
-In the project directory, you can run:
+The app has a Bootstrap navigation bar at the top with headings containing the different components.
 
-### `npm start`
+# Homepage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The homepage consists of two components. One fetches a random quote from an API, and the other is an instance of the weather
+component (described below).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Calculator
 
-### `npm test`
+Simple calculator that can perform addition, subtraction, division, and multiplication.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Weather
 
-### `npm run build`
+A page consisting of 6 instances of the same component. In each instance, you can search for a city where a request is sent
+to a weather API that returns the weather in that city. (Requires an API key)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Dog Check
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A component that allows the user to enter values for properties of dogs. When the user searches, a request is sent to a dog
+API, which responds with 20 dogs that match the specified values. (API key required)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# PIs
 
-### `npm run eject`
+The APIs used for both weather and dog checking are from https://api-ninjas.com/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Weather API: https://api-ninjas.com/api/weather
+Quotes API: https://api-ninjas.com/api/quotes
+Dogs API: https://api-ninjas.com/api/dogs
+To access the APIs, you need to create an account on API-ninjas, where you will receive a key. To use the key in the app,
+create a .env file and add the key as follows:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+REACT_APP_API_KEY = "key"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Fule-cost-calculator-SV
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Description
 
-## Learn More
+Mitt lilla roliga projekt började med idén att skapa ett program som kan beräkna bränslekostnaden för en bilresa baserat
+på bränslepris, genomsnittlig bränsleförbrukning och avstånd. Jag använde React för att skapa ett webbaserat användargränssnitt
+och när jag var klar fortsatte jag med några andra idéer. Jag bestämde mig för att skapa en webbplats som har blivit ganska
+omfattande och där jag kunde skapa några roliga komponenter som kodträning och samtidigt integrera dem i en webbplats.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Appen har en Bootstrap-navigationsfält längst upp med rubriker som innehåller de olika komponenterna
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Startsida
 
-### Code Splitting
+Startsidan består av två komponenter där ena hämtar en slumpmässig quote from en API och den andra är en instans
+av väderkomponenten (Beskrivs nedan)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Miniräknare
 
-### Analyzing the Bundle Size
+Enkel kalkylator som kan utföra addition, subtraktion, division och multiplikation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Väder
 
-### Making a Progressive Web App
+En sida som består av 6 instanser av samma komponent. I varje instans kan man söka efter en stad där en förfrågan skickas till
+en väder-api som returerar vädret i denna staden. (För att kunna använda APIn krävs nyckel)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Hundkollen
 
-### Advanced Configuration
+En komponent som låter användaren mata in ett antal värden för egenskaper hos hundar, när användaren söker skicaks en request
+till en hund-API som svarar med 20 hundar som matchar de värden som man angett (Krävs api-nyckel)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# API
 
-### Deployment
+API-erna som används för både vädret och hundkollen är från https://api-ninjas.com/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Weather-api: https://api-ninjas.com/api/weather
+Quotes- api: https://api-ninjas.com/api/quotes
+Dogs-api: https://api-ninjas.com/api/dogs
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+För att få tillgång till API-erna krävs att man skapar ett konto på API-ninjas, man får då en nyckel.
+För att använda nyckeln i appen krävs att man skapar en .env fil där man lägger in nyckeln som:
+REACT_APP_API_KEY = "nyckel"

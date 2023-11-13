@@ -1,19 +1,45 @@
-
-.search-button{
-    width:200px;
-    height:50px;
-    margin-left: 10px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.search-box{
-    margin-left: 10px;
-    height: 50px;
-    width: 200px;
-
+.weather {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-.form{
-    display:block;
-    justify-content: left;
-    align-items: left;
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.weather-search-box {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 50px;
+}
+
+.weather-search-button {
+  padding: 10px;
+  background-color: gray;
+  color: white;
+  border: solid;
+  cursor: pointer;
+  height: 50px;
+  width: 200px;
+}
+
+.weather-search-button:hover {
+  background-color: #45a049;
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 // import ReactSwitch from 'react-switch'
 import "./DogComponent.css"
+import DogRatingScale from "./DogRatingComponent";
 
 const apiUrl = "https://api.api-ninjas.com/v1/dogs?"
 
@@ -236,11 +237,16 @@ function DogComponent () {
                             </div>
                              <div className="dog-info">
                                 <h3>{dogs[dogIndex].name}</h3>
-                                <p>Skällande: {dogs[dogIndex].barking}</p>
-                                <p>Hårfällande: {dogs[dogIndex].shedding}</p>
-                                <p>Energi: {dogs[dogIndex].energy}</p>
-                                <p>Skyddsamhet: {dogs[dogIndex].protectiveness}</p>
-                                <p>Träningsbarhet: {dogs[dogIndex].trainability}</p>
+                                <p>Skällande </p>
+                                <DogRatingScale rating={dogs[dogIndex].barking}></DogRatingScale>
+                                <p>Hårfällande </p>
+                                <DogRatingScale rating={dogs[dogIndex].shedding}></DogRatingScale>
+                                <p>Energi </p>
+                                <DogRatingScale rating={dogs[dogIndex].energy}></DogRatingScale>
+                                <p>Skyddssamhet</p>
+                                <DogRatingScale rating={dogs[dogIndex].protectiveness}></DogRatingScale>
+                                <p>Träningsbarhet </p>
+                                <DogRatingScale rating={dogs[dogIndex].trainability}></DogRatingScale>
                                 <p></p>
 
                              </div>

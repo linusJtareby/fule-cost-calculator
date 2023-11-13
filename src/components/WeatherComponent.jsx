@@ -1,13 +1,13 @@
 import "./WeatherComponent.css"
 const { useState, useEffect } = require("react")
 
-function WeatherComponent() {
+function WeatherComponent(props) {
     const apiUrl = "https://api.api-ninjas.com/v1/weather?city="
 
 
     const [weatherObject, setWeatherObject] = useState([])
-    const [input, setInput] = useState('Borås')
-    const [cityHeader, setCityHeader] = useState('Borås')
+    const [input, setInput] = useState(props.startingCity)
+    const [cityHeader, setCityHeader] = useState('')
     const [backgroundImageURL, setBackgroundImageURL] = useState('')
 
     useEffect(() => {
@@ -15,7 +15,10 @@ function WeatherComponent() {
     }, [])
 
     const setBackgroundImg = (cloudPct) => {
-        if(cloudPct >= 60 && cloudPct <= 94){
+        if(cloudPct === null || cloudPct === undefined || cloudPct === ""){
+            setBackgroundImageURL('')
+        }
+        else if(cloudPct >= 60 && cloudPct <= 94){
             setBackgroundImageURL("/resources/cloudy.jpg")
         }
         else if(cloudPct <= 59){
@@ -51,43 +54,38 @@ function WeatherComponent() {
     }
 
     return(
-        <div className="weather" style={{
-            width: "550px",
-            border: "2px solid",
-            backgroundImage: `url("${backgroundImageURL}")`,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            height: '40vh',
-        }}>
-            <div>
-            {Object.keys(weatherObject).length > 0 ? (
-                <div>
-                    <h2>Väder i {cityHeader} just nu:</h2>
-                    <p>Temperatur: {weatherObject.temp} *C</p>
-                    <p>Känns som: {weatherObject.feels_like} *C</p>
-                    <p>Vindhastighet: {weatherObject.wind_speed} m/s</p>
-                    <p>Luftfuktighet: {weatherObject.humidity} hygormeter</p>
+        <>
+            <div className="container"style={{
+                backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.9)), url("${backgroundImageURL}")`,}}>
+                <div className="weather">
+                    <div>
+                    {Object.keys(weatherObject).length > 0 ? (
+                        <div>
+                            <h2>Väder i {cityHeader} just nu:</h2>
+                            <h4>Temperatur: {weatherObject.temp} *C</h4>
+                            <h4>Känns som: {weatherObject.feels_like} *C</h4>
+                            <h4>Vindhastighet: {weatherObject.wind_speed} m/s</h4>
+                            <h4>Luftfuktighet: {weatherObject.humidity} hygormeter</h4>
+                        </div>
+                    ) : (<p>Loading weather...</p>)}
+                    </div>
+                    <form className="form" onSubmit={(e) => {e.preventDefault(); handleClick();}}>
+                        <input 
+                            className="weather-search-box"
+                            type="text"
+                            placeholder="Sök stad..."
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                        />
+                        <h4>Sök andra städer för att se väder där</h4>
+                        <button 
+                            className="weather-search-button"
+                            id="knapp"
+                            type="submit"></button>
+                    </form>
                 </div>
-            ) : (<p>Loading weather...</p>)}
             </div>
-            <form className="form" onSubmit={(e) => {e.preventDefault(); handleClick();}}>
-                <input 
-                    className="search-box"
-                    type="text"
-                    placeholder="Sök stad..."
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                />
-                <h4>Sök andra städer för att se väder där</h4>
-                <button 
-                    className="search-button"
-                    id="knapp"
-                    type="submit">
-                        Sök
-                </button>
-            </form>
-        </div>
+        </>
     )
 }
 

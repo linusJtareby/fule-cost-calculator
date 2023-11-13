@@ -1,0 +1,36 @@
+.rating-scale {
+  position: relative;
+  width: 100%;
+  height: 40px; /* Increased height to accommodate labels */
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.scale-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #333;
+}
+
+.scale-label {
+  position: absolute;
+  bottom: 30%;
+  transform: translateY(-40%);
+  text-align: center;
+  left: 0;
+}
+
+.indicator {
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background-color: #046b08;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
