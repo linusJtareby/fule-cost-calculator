@@ -24,14 +24,6 @@ function DogComponent () {
     const [protectiveness, setProtectiveness] = useState('')
     const [trainability, setTrainability] = useState('')
 
-    const attributes = [
-        { name: 'barking', value: barking },
-        { name: 'shedding', value: shedding },
-        { name: 'energy', value: energy },
-        { name: 'protectiveness', value: protectiveness },
-        { name: 'trainability', value: trainability },
-    ];
-
     const fetchDogs = (input) => {
         fetch(`${apiUrl}${input}`, {
             headers: {
@@ -47,6 +39,15 @@ function DogComponent () {
     }
 
     useEffect(() => {
+
+        const attributes = [
+            { name: 'barking', value: barking },
+            { name: 'shedding', value: shedding },
+            { name: 'energy', value: energy },
+            { name: 'protectiveness', value: protectiveness },
+            { name: 'trainability', value: trainability },
+        ];
+
         let updatedSearchString = '';
         for (const attribute of attributes) {
             if (attribute.value > 0) {
@@ -247,8 +248,6 @@ function DogComponent () {
                                 <DogRatingScale rating={dogs[dogIndex].protectiveness}></DogRatingScale>
                                 <p>Träningsbarhet </p>
                                 <DogRatingScale rating={dogs[dogIndex].trainability}></DogRatingScale>
-                                <p></p>
-
                              </div>
                         </div>
                         

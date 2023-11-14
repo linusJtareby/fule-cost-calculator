@@ -11,7 +11,7 @@ function StartComponent() {
                     <div className="quote">
                     <QuoteComponent/>
                     </div>
-                    <WeatherComponent/>
+                    <WeatherComponent startingCity="Madrid"/>
                 </div>
             </div>
         </>

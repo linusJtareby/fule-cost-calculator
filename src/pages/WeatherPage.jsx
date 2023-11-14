@@ -1,4 +1,3 @@
-import { useState } from "react";
 import WeatherComponent from "../components/WeatherComponent";
 import "./WeatherPage.css"
 

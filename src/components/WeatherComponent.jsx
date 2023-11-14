@@ -1,5 +1,5 @@
 import "./WeatherComponent.css"
-const { useState, useEffect } = require("react")
+const { useState, useEffect, useCallback } = require("react")
 
 function WeatherComponent(props) {
     const apiUrl = "https://api.api-ninjas.com/v1/weather?city="
@@ -10,9 +10,26 @@ function WeatherComponent(props) {
     const [cityHeader, setCityHeader] = useState('')
     const [backgroundImageURL, setBackgroundImageURL] = useState('')
 
+
+    const fetchWeather = useCallback((city) => {
+        fetch(`${apiUrl}${city}`, {
+            headers: {
+              'X-Api-Key': process.env.REACT_APP_API_KEY
+            }
+          })
+          .then((response) => response.json())
+          .then((weatherData) => {
+            setWeatherObject(weatherData);
+            console.log(weatherData);
+            setBackgroundImg(weatherData.cloud_pct)
+            console.log(backgroundImageURL)
+        })
+          .catch((error)=> console.error(error))
+    }, [backgroundImageURL]);
+    
     useEffect(() => {
         fetchWeather(input)
-    }, [])
+    }, [input, fetchWeather])
 
     const setBackgroundImg = (cloudPct) => {
         if(cloudPct === null || cloudPct === undefined || cloudPct === ""){
@@ -27,22 +44,6 @@ function WeatherComponent(props) {
         else{
             setBackgroundImageURL("/resources/rain.jpg")
         }
-    }
-
-    const fetchWeather = (city) => {
-        fetch(`${apiUrl}${city}`, {
-            headers: {
-              'X-Api-Key': process.env.REACT_APP_API_KEY
-            }
-          })
-          .then((response) => response.json())
-          .then((weatherData) => {
-            setWeatherObject(weatherData);
-            console.log(weatherData);
-            setBackgroundImg(weatherData.cloud_pct)
-            console.log(backgroundImageURL)
-        })
-          .catch((error)=> console.error(error))
     }
 
     const handleClick = () => {

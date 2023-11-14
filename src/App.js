@@ -4,9 +4,9 @@ import CarTripCalculator from './components/Calculator';
 import StartComponent from './components/StartComponent';
 import NavBar from './components/NavBar'
 import NumberCalculator from './components/NumberCalculator';
-import WeatherComponent from './components/WeatherComponent';
 import DogComponent from './components/DogComponent';
 import WeatherPage from './pages/WeatherPage';
+import GamePage from './pages/GamePage';
 
 function App() {
   //Add api-key in .env
@@ -24,6 +24,7 @@ function App() {
           <Route path='/calculator' element={<NumberCalculator/>}/>
           <Route path='/weather' element={<WeatherPage/>}/>
           <Route path='/hundkollen' element={<DogComponent/>}/>
+          <Route path='/game' element={<GamePage/>}/>
         </Routes>
       </div>
     </BrowserRouter>
