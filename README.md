@@ -28,7 +28,12 @@ to a weather API that returns the weather in that city. (Requires an API key)
 A component that allows the user to enter values for properties of dogs. When the user searches, a request is sent to a dog
 API, which responds with 20 dogs that match the specified values. (API key required)
 
-# PIs
+# Animal Sounds
+
+A component where you can click an image of an animal and get a sound from that animal.
+Sound from Zapsplat.com
+
+# APIs
 
 The APIs used for both weather and dog checking are from https://api-ninjas.com/
 

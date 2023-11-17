@@ -18,7 +18,7 @@ function NavBar() {
             <Nav.Link href="/calculator">Miniräknare</Nav.Link>
             <Nav.Link href='/weather'>Väder</Nav.Link>
             <Nav.Link href='/hundkollen'>Hundkollen</Nav.Link>
-            <Nav.Link href='/game'>Spel</Nav.Link>
+            <Nav.Link href='/sound'>Djurljud</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

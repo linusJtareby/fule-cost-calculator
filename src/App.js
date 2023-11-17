@@ -6,7 +6,7 @@ import NavBar from './components/NavBar'
 import NumberCalculator from './components/NumberCalculator';
 import DogComponent from './components/DogComponent';
 import WeatherPage from './pages/WeatherPage';
-import GamePage from './pages/GamePage';
+import SoundComponent from './components/SoundComponent';
 
 function App() {
   //Add api-key in .env
@@ -24,7 +24,7 @@ function App() {
           <Route path='/calculator' element={<NumberCalculator/>}/>
           <Route path='/weather' element={<WeatherPage/>}/>
           <Route path='/hundkollen' element={<DogComponent/>}/>
-          <Route path='/game' element={<GamePage/>}/>
+          <Route path='/sound' element={<SoundComponent/>}/>
         </Routes>
       </div>
     </BrowserRouter>
